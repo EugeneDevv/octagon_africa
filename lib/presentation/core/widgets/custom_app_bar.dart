@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
     this.title,
-    this.showLeadingIcon = false,
+    this.showLeadingIcon = true,
   }) : super(key: key);
 
   final String? title;
