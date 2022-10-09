@@ -1,6 +1,7 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:octagon_africa/application/services/asset_strings.dart';
 import 'package:octagon_africa/domain/value_objects/constants.dart';
 import 'package:octagon_africa/domain/value_objects/enums.dart';
@@ -175,4 +176,12 @@ String formatPhoneNumber({
       phoneNumber.startsWith('0') ? phoneNumber.substring(1) : phoneNumber;
 
   return '$_countryCode$_phoneNumber';
+}
+
+String formatDate() {
+  final DateTime parsedDate = DateTime.now();
+  final String postDay = DateFormat.d().format(parsedDate);
+
+  final String postMonth = DateFormat.MMMM().format(parsedDate);
+  return '$postMonth $postDay';
 }
