@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:octagon_africa/application/services/utils.dart';
 import 'package:octagon_africa/presentation/core/theme/text_theme.dart';
 import 'package:octagon_africa/presentation/core/widgets/custom_app_bar.dart';
 import 'package:octagon_africa/presentation/core/widgets/greetings_component.dart';
@@ -21,7 +22,7 @@ class DashboardPage extends StatelessWidget {
           children: <Widget>[
             size15VerticalSizedBox,
             Text(
-              'June 12th',
+              formatDate(),
               style: boldSize14Text(),
             ),
             size15VerticalSizedBox,
