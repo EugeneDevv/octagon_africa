@@ -26,7 +26,7 @@ class OctagonApp extends StatelessWidget {
               navigatorKey: appGlobalNavigatorKey,
               debugShowCheckedModeBanner: false,
               onGenerateRoute: AppRouter.generateRoute,
-              initialRoute: AppRoutes.homePage,
+              initialRoute: AppRoutes.loginPage,
             );
           }),
     );

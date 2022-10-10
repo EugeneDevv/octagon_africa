@@ -65,3 +65,5 @@ The project has been written in Flutter and Dart language. For state management 
 ![Simulator Screen Shot - iPhone 13 Pro Max - 2022-10-10 at 07 45 56](https://user-images.githubusercontent.com/52879659/194800874-44c7e1cc-7d2e-4d58-a835-e4c6b96d74a9.png)
 
 ### Navigation Drawer
+
+![Simulator Screen Shot - iPhone 13 Pro Max - 2022-10-10 at 13 14 06](https://user-images.githubusercontent.com/52879659/194844639-4f9f3f3b-24f3-44d2-8e84-8051a78822c6.png)
