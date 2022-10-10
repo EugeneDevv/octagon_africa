@@ -10,10 +10,12 @@ _$_BottomNavigationState _$$_BottomNavigationStateFromJson(
         Map<String, dynamic> json) =>
     _$_BottomNavigationState(
       currentBottomNavIndex: json['currentBottomNavIndex'] as int?,
+      barTitle: json['barTitle'] as String?,
     );
 
 Map<String, dynamic> _$$_BottomNavigationStateToJson(
         _$_BottomNavigationState instance) =>
     <String, dynamic>{
       'currentBottomNavIndex': instance.currentBottomNavIndex,
+      'barTitle': instance.barTitle,
     };

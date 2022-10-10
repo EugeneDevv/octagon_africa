@@ -12,3 +12,5 @@ const String nigeriaFlagPngPath = 'assets/icons/nga.png';
 
 const String moodSelectionBackgroundUrl =
     'assets/mood_selection_background.png';
+const String profileIconPngPath =
+    'assets/profile_icon.png';

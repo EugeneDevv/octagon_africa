@@ -3,6 +3,7 @@ import 'package:octagon_africa/application/services/utils.dart';
 import 'package:octagon_africa/presentation/core/theme/text_theme.dart';
 import 'package:octagon_africa/presentation/core/widgets/custom_app_bar.dart';
 import 'package:octagon_africa/presentation/core/widgets/greetings_component.dart';
+import 'package:octagon_africa/presentation/core/widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:octagon_africa/presentation/core/widgets/spaces.dart';
 import 'package:octagon_africa/presentation/core/widgets/summary_card.dart';
 
@@ -11,12 +12,7 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(
-        showLeadingIcon: true,
-        title: 'DASHBOARD',
-      ),
-      body: Padding(
+    return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +48,6 @@ class DashboardPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

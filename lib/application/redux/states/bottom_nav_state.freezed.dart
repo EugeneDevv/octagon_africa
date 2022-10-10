@@ -22,6 +22,7 @@ BottomNavigationState _$BottomNavigationStateFromJson(
 /// @nodoc
 mixin _$BottomNavigationState {
   int? get currentBottomNavIndex => throw _privateConstructorUsedError;
+  String? get barTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $BottomNavigationStateCopyWith<$Res> {
   factory $BottomNavigationStateCopyWith(BottomNavigationState value,
           $Res Function(BottomNavigationState) then) =
       _$BottomNavigationStateCopyWithImpl<$Res>;
-  $Res call({int? currentBottomNavIndex});
+  $Res call({int? currentBottomNavIndex, String? barTitle});
 }
 
 /// @nodoc
@@ -49,12 +50,17 @@ class _$BottomNavigationStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentBottomNavIndex = freezed,
+    Object? barTitle = freezed,
   }) {
     return _then(_value.copyWith(
       currentBottomNavIndex: currentBottomNavIndex == freezed
           ? _value.currentBottomNavIndex
           : currentBottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int?,
+      barTitle: barTitle == freezed
+          ? _value.barTitle
+          : barTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -66,7 +72,7 @@ abstract class _$$_BottomNavigationStateCopyWith<$Res>
           $Res Function(_$_BottomNavigationState) then) =
       __$$_BottomNavigationStateCopyWithImpl<$Res>;
   @override
-  $Res call({int? currentBottomNavIndex});
+  $Res call({int? currentBottomNavIndex, String? barTitle});
 }
 
 /// @nodoc
@@ -84,12 +90,17 @@ class __$$_BottomNavigationStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentBottomNavIndex = freezed,
+    Object? barTitle = freezed,
   }) {
     return _then(_$_BottomNavigationState(
       currentBottomNavIndex: currentBottomNavIndex == freezed
           ? _value.currentBottomNavIndex
           : currentBottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int?,
+      barTitle: barTitle == freezed
+          ? _value.barTitle
+          : barTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -97,17 +108,19 @@ class __$$_BottomNavigationStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BottomNavigationState implements _BottomNavigationState {
-  _$_BottomNavigationState({this.currentBottomNavIndex});
+  _$_BottomNavigationState({this.currentBottomNavIndex, this.barTitle});
 
   factory _$_BottomNavigationState.fromJson(Map<String, dynamic> json) =>
       _$$_BottomNavigationStateFromJson(json);
 
   @override
   final int? currentBottomNavIndex;
+  @override
+  final String? barTitle;
 
   @override
   String toString() {
-    return 'BottomNavigationState(currentBottomNavIndex: $currentBottomNavIndex)';
+    return 'BottomNavigationState(currentBottomNavIndex: $currentBottomNavIndex, barTitle: $barTitle)';
   }
 
   @override
@@ -116,13 +129,16 @@ class _$_BottomNavigationState implements _BottomNavigationState {
         (other.runtimeType == runtimeType &&
             other is _$_BottomNavigationState &&
             const DeepCollectionEquality()
-                .equals(other.currentBottomNavIndex, currentBottomNavIndex));
+                .equals(other.currentBottomNavIndex, currentBottomNavIndex) &&
+            const DeepCollectionEquality().equals(other.barTitle, barTitle));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(currentBottomNavIndex));
+      runtimeType,
+      const DeepCollectionEquality().hash(currentBottomNavIndex),
+      const DeepCollectionEquality().hash(barTitle));
 
   @JsonKey(ignore: true)
   @override
@@ -139,14 +155,17 @@ class _$_BottomNavigationState implements _BottomNavigationState {
 }
 
 abstract class _BottomNavigationState implements BottomNavigationState {
-  factory _BottomNavigationState({final int? currentBottomNavIndex}) =
-      _$_BottomNavigationState;
+  factory _BottomNavigationState(
+      {final int? currentBottomNavIndex,
+      final String? barTitle}) = _$_BottomNavigationState;
 
   factory _BottomNavigationState.fromJson(Map<String, dynamic> json) =
       _$_BottomNavigationState.fromJson;
 
   @override
   int? get currentBottomNavIndex;
+  @override
+  String? get barTitle;
   @override
   @JsonKey(ignore: true)
   _$$_BottomNavigationStateCopyWith<_$_BottomNavigationState> get copyWith =>

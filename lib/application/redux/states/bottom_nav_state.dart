@@ -6,12 +6,14 @@ part 'bottom_nav_state.g.dart';
 
 @freezed
 class BottomNavigationState with _$BottomNavigationState {
-  factory BottomNavigationState({int? currentBottomNavIndex}) =
-      _BottomNavigationState;
+  factory BottomNavigationState({
+    int? currentBottomNavIndex,
+    String? barTitle,
+  }) = _BottomNavigationState;
 
   factory BottomNavigationState.fromJson(Map<String, dynamic> json) =>
       _$BottomNavigationStateFromJson(json);
 
   factory BottomNavigationState.initial() =>
-      BottomNavigationState(currentBottomNavIndex: 0);
+      BottomNavigationState(currentBottomNavIndex: 0, barTitle: 'DASHBOARD');
 }
