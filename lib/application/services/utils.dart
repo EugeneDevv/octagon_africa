@@ -185,3 +185,20 @@ String formatDate() {
   final String postMonth = DateFormat.MMMM().format(parsedDate);
   return '$postMonth $postDay';
 }
+
+String getBarTitle(int index) {
+  switch (index) {
+    case 0:
+      return 'DASHBOARD';
+    case 1:
+      return 'PRODUCTS AND SERVICES';
+    case 2:
+      return 'ACCOUNTS';
+    case 3:
+      return 'FAQS';
+    case 4:
+      return 'PROFILE';
+    default:
+      return '';
+  }
+}

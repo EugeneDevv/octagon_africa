@@ -3,12 +3,15 @@ import 'package:octagon_africa/application/redux/states/app_state.dart';
 
 class BottomNavViewModel extends Vm {
   final int currentIndex;
+  final String barTitle;
 
   BottomNavViewModel({
     required this.currentIndex,
+    required this.barTitle,
   }) : super(
           equals: <Object?>[
             currentIndex,
+            barTitle,
           ],
         );
 
@@ -16,6 +19,7 @@ class BottomNavViewModel extends Vm {
     return BottomNavViewModel(
       currentIndex:
           store.state.bottomNavigationState?.currentBottomNavIndex ?? 0,
+      barTitle: store.state.bottomNavigationState?.barTitle ?? '',
     );
   }
 }

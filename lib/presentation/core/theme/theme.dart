@@ -10,6 +10,10 @@ class AppTheme {
         primary: AppColors.themeColors.primaryColor,
         secondary: AppColors.themeColors.accentColor,
       ),
+      appBarTheme: const AppBarTheme(
+        iconTheme: IconThemeData(color: AppColors.blackColor),
+        color: Colors.deepPurpleAccent, //<-- SEE HERE
+      ),
       backgroundColor: AppColors.themeColors.backgroundColor,
       textSelectionTheme: TextSelectionThemeData(
         selectionColor: AppColors.themeColors.textSelectionColor,

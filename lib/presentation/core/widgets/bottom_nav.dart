@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:octagon_africa/application/redux/actions/bottom_nav_action.dart';
 import 'package:octagon_africa/application/redux/states/app_state.dart';
+import 'package:octagon_africa/application/services/utils.dart';
 import 'package:octagon_africa/presentation/core/theme/theme.dart';
 import 'package:octagon_africa/presentation/dashboard/dashboard_page.dart';
 import 'package:octagon_africa/presentation/deposits/deposits_page.dart';
@@ -22,6 +23,7 @@ class BottomNavBar extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 18.0),
         child: GNav(
             tabBackgroundColor: Theme.of(context).primaryColor,
+            selectedIndex: currentIndex,
             backgroundColor: AppColors.whiteColor,
             activeColor: AppColors.whiteColor,
             padding: const EdgeInsets.all(10.0),
@@ -29,7 +31,9 @@ class BottomNavBar extends StatelessWidget {
             onTabChange: (int currentIndex) {
               StoreProvider.dispatch<AppState>(
                 context,
-                BottomNavAction(currentBottomNavIndex: currentIndex),
+                BottomNavAction(
+                    currentBottomNavIndex: currentIndex,
+                    barTitle: getBarTitle(currentIndex)),
               );
             },
             tabs: const <GButton>[
@@ -39,9 +43,9 @@ class BottomNavBar extends StatelessWidget {
               ),
               GButton(
                 icon: Icons.amp_stories,
-                text: 'Deposits',
+                text: 'Products',
               ),
-              GButton(icon: Icons.account_balance_wallet, text: 'Wallet'),
+              GButton(icon: Icons.account_balance_wallet, text: 'Accounts'),
               GButton(icon: Icons.help_outline, text: 'FAQs'),
               GButton(
                 icon: Icons.account_circle,
